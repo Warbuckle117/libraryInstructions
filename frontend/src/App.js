@@ -14,26 +14,26 @@ import {
 
 
 function App() {
-  const [bookListData, setBookListData] = useState([]);
+  // const [bookListData, setBookListData] = useState([]);
 
-  useEffect(() => {
-    fetch("http://localhost:8080/books")
-    .then(response => response.json())
-    .then((data) => setBookListData(data))
-    .then(() => alert("The list is set"))
-    .then(console.log('this is the bookList from the useEffect: ', bookListData))
+  // useEffect(() => {
+  //   fetch("http://localhost:8080/books")
+  //     .then(response => response.json())
+  //     .then((data) => setBookListData(data))
+  //     .then(() => alert("The list is set"))
+  //     .then(console.log('this is the bookList from the useEffect: ', bookListData))
 
-  }, [])
+  // }, []) bookListData={bookListData}
 
 
 
   return (
     <Router>
-    <Switch>
-      <Route exact path='/'>
-        <Home bookListData={bookListData} />
-      </Route>
-    </Switch>
+      <Switch>
+        <Route exact path='/'>
+          <Home  />
+        </Route>
+      </Switch>
     </Router>
   );
 }
