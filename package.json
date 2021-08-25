@@ -1,0 +1,19 @@
+{
+  "name": "libraryinstructions",
+  "version": "1.0.0",
+  "description": "librayInstructions",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Warbuckle117/libraryInstructions.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Warbuckle117/libraryInstructions/issues"
+  },
+  "homepage": "https://github.com/Warbuckle117/libraryInstructions#readme"
+}
