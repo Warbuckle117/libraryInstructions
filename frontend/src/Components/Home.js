@@ -1,34 +1,29 @@
 import logo from '../logo.svg';
 import BookList from './BookList';
+import App from '../App';
 import React, { useState, useEffect } from 'react';
+import { Paper, Grid, Typography } from '@material-ui/core'
 
 function Home (props) {
-    
-    const [bookListData, setBookListData] = useState([]);
-    const [listCounter, setListCounter] = useState(0)
-    
-
-    useEffect(() => {
-      fetch("http://localhost:8080/books")
-        .then(response => response.json())
-        .then((data) => setBookListData(data))
-        // .then(() => alert("The list is set"))
-        .then(console.log('this is the bookList from the useEffect in Home.js: ', bookListData))
-  
-    }, [])
 
     return  (
+        <Paper>
+            <Grid container>
+                <Grid s={12}>
+                    <Typography>
+                        SDI Library
+                    </Typography>
+                </Grid>
+            </Grid>
         <header>
             <div>
+                <h1> SDI Library </h1>
                 <h3>
-                    Home.js
-                    <div>
-                    <BookList bookListData={bookListData} listCounter={listCounter}/>
-                    </div>
+                    <BookList bookListData={props.bookListData} handleClick={props.handleClick}/>
                 </h3>
-
             </div>
         </header>
+        </Paper>
     )
 }
 
